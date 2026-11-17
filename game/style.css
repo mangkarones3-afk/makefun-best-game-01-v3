@@ -1,0 +1,45 @@
+/* CLOUDBRAWL page furniture: the game is the canvas; the page only centres it
+   on a deep-sky backdrop and keeps it whole on any screen. */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #173a5e;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#stage {
+  position: relative;
+  width: min(100vw, 160vh);
+  line-height: 0;
+}
+
+#game {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #2a6cb8;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.45);
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: crosshair;
+}
+
+#fallback {
+  display: none;
+  line-height: 1.5;
+  color: #fdf6e0;
+  text-align: center;
+  padding: 1rem;
+}
